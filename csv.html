@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSV Data</title>
+  </head>
+  <body>
+    <script>
+      const csvurl =
+        "https://gist.githubusercontent.com/aspynlim/ca2c1a9e644572fd25da9ed3820610bb/raw/d3colors.csv";
+
+      const fetchText = async (url) => {
+        const response = await fetch(url);
+        return await response.text();
+      };
+
+      fetchText(csvurl).then((text) => {
+        console.log(text);
+      });
+
+      // fetch(url).then((response) => {
+      //   console.log(
+      //     response.text().then((text) => {
+      //       console.log(text);
+      //     })
+      //   );
+      // });
+    </script>
+  </body>
+</html>
